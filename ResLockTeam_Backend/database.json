@@ -1,0 +1,10 @@
+{
+    "dev": {
+      "driver": "mysql",
+      "host": {"ENV": "HOST"},
+      "port": {"ENV": "DB_PORT"},
+      "user": {"ENV": "USER"},
+      "password": {"ENV": "PASSWORD"},
+      "database": {"ENV": "DATABASE"}
+    }
+  }

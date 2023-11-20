@@ -1,0 +1,42 @@
+{
+    "expo": {
+      "name": "ResLock",
+      "slug": "reslock",
+      "scheme": "com.reslock.googlesignin",
+      "version": "1.0.0",
+      "orientation": "portrait",
+      "icon": "./assets/icon.png",
+      "userInterfaceStyle": "light",
+      "splash": {
+        "image": "./assets/splash.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#F2F2F2"
+      },
+      "updates": {
+        "fallbackToCacheTimeout": 0
+      },
+      "assetBundlePatterns": [
+        "**/*"
+      ],
+      "ios": {
+        "supportsTablet": true,
+        "bundleIdentifier": "com.reslock.googlesignin"
+      },
+      "android": {
+        "package": "com.reslock.googlesignin",
+        "adaptiveIcon": {
+          "foregroundImage": "./assets/adaptive-icon.png",
+          "backgroundColor": "#F2F2F2"
+        }
+      },
+      "web": {
+        "favicon": "./assets/favicon.png"
+      },
+      "extra": {
+        "eas": {
+          "projectId": "099397b3-3679-4473-9771-4ad432a0241f"
+        }
+      },
+      "owner": "reslock"
+    }
+  }

@@ -1,0 +1,21 @@
+.containerForModal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-gray-color);
+    height: calc(100vh - 75px); /* the 75 is the height of the header. This stops the scroll bar from showing up. Will have to update if we change the size of the header*/
+}
+
+.TabView {
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    background-color: var(--white-color);
+    /* Can maybe do a drop shadow to make the modal pop more, but I didnt think it looked too good when I made it cause i suck */
+}
+
+.Tabs {
+    justify-content: center;
+    border-radius: 10px;
+    padding: 2%;
+}

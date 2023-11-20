@@ -1,0 +1,45 @@
+# Node.js with React
+# Build a Node.js project that uses React.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+# Can trigger on everything implicitly by not having a trigger; this is explicit version
+trigger:
+  branches:
+    include:
+      - '*'
+
+# Variable to see if the current branch is main (Will be used to conditional deploy)
+variables:
+  isMain: $[eq(variables['Build.SourceBranch'], 'refs/heads/main')]
+
+pool:
+  vmImage: ubuntu-latest
+
+stages:
+  - stage: 'Test'
+    jobs:
+      - job:
+        steps:
+        - task: NodeTool@0
+          inputs:
+            versionSpec: '18.x'
+          displayName: 'Install Node.js'
+        - script: |
+            yarn
+            yarn test
+          displayName: 'yarn install and test'
+
+  - stage: 'Deploy'
+    condition: and(succeeded(), eq(variables.isMain, 'true'))
+    jobs:
+      - job:
+        steps:
+          - script: |
+              echo $(isMain)
+              echo TODO build app and deploy
+
+  # TODO
+  # Continuous Delivery Part
+  # Need to figure out what to put for the "npm run build" script
+  # May also have to do two different builds for iOS and Android

@@ -1,0 +1,19 @@
+#form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+/* May also want to make this a component, if we use more buttons */
+.button {
+    background-color: var(--secondary-color) !important; /*Fix this with themes in MUI. Because the table uses an out of date version I didn't want to update because the button uses the current MUI version which may break things*/
+    max-width: 14rem;
+    height: 3rem;
+}
+
+.button:hover {
+    background-color: var(--light-orange-color) !important
+}

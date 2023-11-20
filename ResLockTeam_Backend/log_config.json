@@ -1,0 +1,13 @@
+{
+    "appenders": {
+        "logfile": {
+            "type": "file",
+            "filename": "logs/logfile.log",
+            "maxLogSize": 10485760,
+            "backups": 3
+        }
+    },
+    "categories": {
+        "default": { "appenders": ["logfile"], "level": "INFO" }
+    }
+}

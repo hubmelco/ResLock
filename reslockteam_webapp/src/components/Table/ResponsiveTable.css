@@ -1,0 +1,16 @@
+.Table{
+    display: flex;
+}
+
+.AddButton{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: medium;
+    background-color: #FFAF4D;
+    padding: 6px;
+    padding-left: 40%;
+    padding-right: 50%;
+    border-radius: 15px;
+    color: white;
+}

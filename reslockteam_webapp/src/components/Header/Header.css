@@ -1,0 +1,33 @@
+#root {
+    --header-height: 75px
+}
+
+.header {
+    display: flex;
+    height: var(--header-height);
+    background-color:var(--primary-color);
+    color: var(--white-color);
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 5% 5%;
+}
+
+.logo {
+    width: 175px;
+}
+
+.dropdown {
+    background-color: var(--primary-color) !important;
+    color: var(--white-color) !important;
+    border: none !important;
+    font-size: var(--text-font-size) !important;
+    height: var(--header-height);
+}
+
+.icon {
+    height: calc(var(--header-height) / 2);
+    object-fit: contain;
+    background-color: white;
+    border-radius: 50%;
+    margin-left: 10px;
+}
