@@ -31,8 +31,6 @@ const OCRService = (app: express.Application) => {
 
     /**
      * Reads the data of the image passed in and sends it to the microsoft service
-     * images are NOT saved (technically they are saved as binaries in TEMP folders hidden somewhere which are probably deleted). dont hate me rob please :(
-     * needs 'authenticate' in the post but removing it helps for testing right now
     */
     app.post("/ocr", authenticate(privilege_level.WORKER), uploads.single('profile'), async (req: express.Request, res: express.Response, next: express.Next) => {
         try {
